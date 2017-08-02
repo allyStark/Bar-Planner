@@ -58,6 +58,10 @@ app.use(expressValidator({
     }
 }));
 
+app.post('/test', function(req, res){
+    res.json({ 'message': 'working' });
+});
+
 //Global Vars
 app.use(function(req, res, next){
     res.locals.user = req.user || null;
